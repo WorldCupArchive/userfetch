@@ -3,46 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Region Finder</title>
+    <title>X User Region Finder</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>🌍 Your Region Information</h1>
+            <h1>🐦 X User Region Finder</h1>
+            <p class="subtitle">Search X users and discover their regions</p>
             
-            <button id="fetchBtn" class="btn">Get My Region</button>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Enter X username (without @)" 
+                    class="input-field"
+                >
+                <button id="searchBtn" class="btn">Search User</button>
+            </div>
             
             <div id="loading" class="loading hidden">
                 <div class="spinner"></div>
-                <p>Fetching your location...</p>
+                <p>Fetching user information...</p>
             </div>
             
             <div id="result" class="result hidden">
+                <div class="user-card">
+                    <img id="userAvatar" src="" alt="User avatar" class="avatar">
+                    <div class="user-info">
+                        <h2 id="userName"></h2>
+                        <p id="userHandle" class="handle"></p>
+                    </div>
+                </div>
+                
                 <div class="info-box">
                     <div class="info-item">
-                        <span class="label">Country:</span>
-                        <span id="country" class="value">-</span>
+                        <span class="label">Name:</span>
+                        <span id="name" class="value">-</span>
                     </div>
                     <div class="info-item">
                         <span class="label">Region:</span>
                         <span id="region" class="value">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="label">City:</span>
-                        <span id="city" class="value">-</span>
+                        <span class="label">Location:</span>
+                        <span id="location" class="value">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="label">Timezone:</span>
-                        <span id="timezone" class="value">-</span>
+                        <span class="label">Bio:</span>
+                        <span id="bio" class="value">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="label">Coordinates:</span>
-                        <span id="coordinates" class="value">-</span>
+                        <span class="label">Followers:</span>
+                        <span id="followers" class="value">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="label">ISP:</span>
-                        <span id="isp" class="value">-</span>
+                        <span class="label">Verified:</span>
+                        <span id="verified" class="value">-</span>
                     </div>
                 </div>
                 <button id="resetBtn" class="btn btn-secondary">Clear</button>
@@ -50,7 +67,7 @@
             
             <div id="error" class="error hidden">
                 <p id="errorMessage"></p>
-                <button id="retryBtn" class="btn btn-secondary">Retry</button>
+                <button id="retryBtn" class="btn btn-secondary">Try Again</button>
             </div>
         </div>
     </div>
