@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Region Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🌍 Your Region Information</h1>
+            
+            <button id="fetchBtn" class="btn">Get My Region</button>
+            
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Fetching your location...</p>
+            </div>
+            
+            <div id="result" class="result hidden">
+                <div class="info-box">
+                    <div class="info-item">
+                        <span class="label">Country:</span>
+                        <span id="country" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Region:</span>
+                        <span id="region" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">City:</span>
+                        <span id="city" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Timezone:</span>
+                        <span id="timezone" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Coordinates:</span>
+                        <span id="coordinates" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">ISP:</span>
+                        <span id="isp" class="value">-</span>
+                    </div>
+                </div>
+                <button id="resetBtn" class="btn btn-secondary">Clear</button>
+            </div>
+            
+            <div id="error" class="error hidden">
+                <p id="errorMessage"></p>
+                <button id="retryBtn" class="btn btn-secondary">Retry</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
