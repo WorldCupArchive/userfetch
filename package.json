@@ -1,0 +1,20 @@
+{
+  "name": "X User Region Finder",
+  "version": "1.0.0",
+  "description": "Search X users and discover their regions",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build needed'",
+    "start": "echo 'Ready for deployment'"
+  },
+  "keywords": [
+    "x",
+    "twitter",
+    "users",
+    "region",
+    "location"
+  ],
+  "author": "WorldCupArchive",
+  "license": "MIT",
+  "dependencies": {}
+}
